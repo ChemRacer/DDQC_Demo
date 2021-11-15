@@ -5,7 +5,7 @@ You can use the [editor on GitHub](https://github.com/ChemRacer/VogLab_Book_Chap
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Tutorials
-Tutorials for the data-drive complete active space second-order perturbation theory (DDCASPT2) can be found in [DDCASPT2](Tutorials/DDCASPT2/ddcaspt2.md) and data-driven coupled clusters singles and doubles [DDCCSD](Tutorials/DDCCSD/ddccsd.md)
+[Tutorials](Tutorials/) for the data-drive complete active space second-order perturbation theory (DDCASPT2) can be found in [DDCASPT2](Tutorials/DDCASPT2/ddcaspt2.md) and data-driven coupled clusters singles and doubles [DDCCSD](Tutorials/DDCCSD/ddccsd.md)
 
 ### Markdown
 
