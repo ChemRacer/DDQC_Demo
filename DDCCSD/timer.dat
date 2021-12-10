@@ -69,3 +69,60 @@ HF: Form C                          :      1.667u      0.017s      1.108w   1236
 Libint2ERI::Libint2ERI              :      0.817u      0.000s      0.581w    105 calls
 
 **************************************************************************************
+
+Host: utkinternet.desktops.utk.edu
+
+Timers On : Fri Dec 10 15:19:43 2021
+Timers Off: Fri Dec 10 16:09:08 2021
+
+Wall Time:     2964.99 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :      8.000u      1.017s      6.430w    105 calls
+Libint2ERI::Libint2ERI              :      3.300u      0.800s      2.586w    315 calls
+HF: Form core H                     :      0.300u      0.217s      0.418w    105 calls
+HF: Form S/X                        :      0.067u      0.033s      0.039w    105 calls
+HF: Guess                           :      9.050u      1.283s      7.276w    105 calls
+SAD Guess                           :      8.567u      1.200s      6.884w    105 calls
+HF: Form G                          :      0.567u      0.050s      0.475w   1341 calls
+JK: D                               :      0.033u      0.017s      0.044w   1341 calls
+JK: USO2AO                          :      0.017u      0.000s      0.014w   1341 calls
+JK: JK                              :      0.433u      0.017s      0.313w   1341 calls
+PK computes JK                      :      0.433u      0.017s      0.305w   1341 calls
+JK: AO2USO                          :      0.000u      0.000s      0.004w   1341 calls
+HF: Form F                          :      0.133u      0.017s      0.046w   1341 calls
+HF: Form D                          :      0.033u      0.000s      0.034w   1341 calls
+HF: DIIS                            :      2.500u      0.683s      2.381w   1236 calls
+DIISManager::add_entry              :      0.100u      0.350s      0.395w   1236 calls
+DIISManager::extrapolate            :      0.283u      0.267s      0.361w   1236 calls
+bMatrix setup                       :      0.083u      0.167s      0.133w   1236 calls
+bMatrix pseudoinverse               :      0.150u      0.000s      0.114w   1236 calls
+New vector                          :      0.033u      0.083s      0.090w   1236 calls
+HF: Form C                          :      1.483u      0.017s      1.021w   1236 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :      8.000u      1.017s      6.430w    105 calls
+| Libint2ERI::Libint2ERI            :      2.233u      0.767s      1.950w    210 calls
+HF: Form core H                     :      0.300u      0.217s      0.418w    105 calls
+HF: Form S/X                        :      0.067u      0.033s      0.039w    105 calls
+HF: Guess                           :      9.050u      1.283s      7.276w    105 calls
+| SAD Guess                         :      8.567u      1.200s      6.884w    105 calls
+HF: Form G                          :      0.567u      0.050s      0.475w   1341 calls
+| JK: D                             :      0.033u      0.017s      0.044w   1341 calls
+| JK: USO2AO                        :      0.017u      0.000s      0.014w   1341 calls
+| JK: JK                            :      0.433u      0.017s      0.313w   1341 calls
+| | PK computes JK                  :      0.433u      0.017s      0.305w   1341 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.004w   1341 calls
+HF: Form F                          :      0.133u      0.017s      0.046w   1341 calls
+HF: Form D                          :      0.033u      0.000s      0.034w   1341 calls
+HF: DIIS                            :      2.500u      0.683s      2.381w   1236 calls
+| DIISManager::add_entry            :      0.100u      0.350s      0.395w   1236 calls
+| DIISManager::extrapolate          :      0.283u      0.267s      0.361w   1236 calls
+| | bMatrix setup                   :      0.083u      0.167s      0.133w   1236 calls
+| | bMatrix pseudoinverse           :      0.150u      0.000s      0.114w   1236 calls
+| | New vector                      :      0.033u      0.083s      0.090w   1236 calls
+HF: Form C                          :      1.483u      0.017s      1.021w   1236 calls
+Libint2ERI::Libint2ERI              :      1.067u      0.033s      0.637w    105 calls
+
+**************************************************************************************
