@@ -1,6 +1,5 @@
 theme: jekyll-theme-modernist
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
 
 title: ChemRacer
 description: DDQC_Demo
