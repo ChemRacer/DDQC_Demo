@@ -1,10 +1,19 @@
 theme: jekyll-theme-modernist
 markdown: kramdown
 
-title: Data-Driven Quantum Chemistry Case Studies 
-description: Quantum Chemistry in the Age of Machine Learning
+
+# --- List of links in the navigation bar --- #
+navbar-links:
+  About Me: "aboutme"
+  Resources:
+    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's home: "https://deanattali.com"
 
 
+
+# Name of website
 layout: page
-title: "Home"
+title: Data-Driven Quantum Chemistry Case Studies 
 permalink: https://chemracer.github.io/DDQC_Demo/Home
+description: Quantum Chemistry in the Age of Machine Learning
