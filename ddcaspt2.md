@@ -24,7 +24,7 @@ import sys
 !{sys.executable} -m pip install missing_package_name
 ```
 
-# Import packages
+## Import packages
 
 ```python
 
@@ -54,7 +54,7 @@ from sklearn.metrics import r2_score
 ```
 
 
-# Files required to run gen_pair.ipynb:
+## Files required to run gen_pair.ipynb:
 - The angles (106-180 degrees): keys.pickle
 - The regression targets Y (pair energies): targets.pickle
 - The feature set, X: feats.pickle
@@ -105,7 +105,8 @@ caspt2=pd.read_csv('caspt2.csv',index_col='Label').drop(columns='Unnamed: 0')
 casscf=pd.read_csv('casscf.csv',index_col='Label').drop(columns='Unnamed: 0').loc[map(float,test_ind)].rename(columns={'SCF':0})
 E1Dict=pd.read_csv("E2.csv").rename(columns={'Unnamed: 0':'Label'}).set_index('Label')
 ```
-# First Evaluation Metric
+
+## First Evaluation Metric
 Features are scaled and then a random forest regressor is trained to predict pair energies. 70% of the data for training and 30% for testing.
 ```python
 scaler = MinMaxScaler().fit(X_train)
@@ -181,7 +182,7 @@ plt.show()
 ![](/images/PEC_4_3_1D_VDZP_LC.png)
 
 
-# Second Evaluation Metric
+## Second Evaluation Metric
 Learning curves are used to evaluate the effectiveness of our model with respect to the total correlation energies. The amount of test data is held the same as training set is systematically increased.
 ```python
 # Create the dataset
