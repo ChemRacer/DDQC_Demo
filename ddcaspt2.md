@@ -4,8 +4,44 @@ title: DDCASPT2
 category: DDCASPT2 
 ---
 
-The data-driven complete active space second-order perturbation theory method is described below 
+In this tutorial, the potential energies curve of the symmetric angle bend of ozone is shown using DDCASPT2. 
 
+
+Data has been packaged into pickle or csv files for this method. 
+
+The features can be opened:
 ```python
-a=1+1
+with open('feats.pickle', 'rb') as handle:
+    X = pickle.load(handle)
 ```
+
+
+The targets can be opened:
+```python
+with open('targets.pickle', 'rb') as handle:
+    Y = pickle.load(handle)
+```
+
+The keys, containing the bond angles, can be opened:
+```python
+with open('keys.pickle', 'rb') as handle:
+    keys = pickle.load(handle)
+```
+
+The CASPT2 energies for the full curve:
+```python
+caspt2=pd.read_csv('caspt2.csv',index_col='Label').drop(columns='Unnamed: 0')
+```
+
+The CASSCF energies for the full curve:
+```python
+casscf=pd.read_csv('casscf.csv',index_col='Label').drop(columns='Unnamed: 0').loc[map(float,test_ind)].rename(columns={'SCF':0})
+```
+
+
+The total correlation energies for the full curve:
+```python
+E1Dict=pd.read_csv("E2.csv").rename(columns={'Unnamed: 0':'Label'}).set_index('Label')
+```
+
+
