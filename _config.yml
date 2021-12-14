@@ -21,6 +21,9 @@ title: Data-Driven Quantum Chemistry Case Studies
 permalink: https://chemracer.github.io/DDQC_Demo/
 description: Quantum Chemistry in the Age of Machine Learning
 
-
-
-  
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "page"
