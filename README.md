@@ -1,9 +1,9 @@
-# Data-Driven Quantum Chemistry Case Studies 
-This repository provides examples of data-driven quantum chemistry (DDQC) methods from the "Machine Learning for Accelerating and Improving *ab initio* Wave Function-based Methods" book chapter in  *Quantum Chemistry in the Age of Machine Learning*. 
+# Data-Driven Quantum Chemistry Case Studies
+This repository provides examples of data-driven quantum chemistry (DDQC) methods from the "Machine Learning for Accelerating and Improving *ab initio* Wave Function-based Methods" book chapter in  *Quantum Chemistry in the Age of Machine Learning*.
 
 ## Code Versions
-- DDCCSD=1.0   
-- DDCASPT2=1.0   
+- DDCCSD=0.1
+- DDCASPT2=0.1
 
 
 ## Setup
@@ -36,5 +36,5 @@ jupyter notebook DDCCSD_model.ipynb
 To run the DDCASPT2 tutorial:
 ```
 cd DDQC_Demo/DDCASPT2/
-jupyter notebook gen_pair.ipynb 
+jupyter notebook gen_pair.ipynb
 ```
