@@ -1,5 +1,10 @@
 theme: jekyll-theme-modernist
 markdown: kramdown
 
-title: ChemRacer
-description: DDQC_Demo
+title: Data-Driven Quantum Chemistry Case Studies 
+description: Quantum Chemistry in the Age of Machine Learning
+
+
+layout: page
+title: "Home"
+permalink: https://chemracer.github.io/DDQC_Demo/Home
