@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page 
 title: DDCCSD 
 tags: [CCSD,DDCCSD,Machine Learning, tutorial]
 category: DDCCSD 
