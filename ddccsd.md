@@ -261,6 +261,3 @@ plt.show()
 ```
 ![](/images/Water2.png)
 
-
-![](/images/Water.png)
-
