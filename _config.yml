@@ -1,29 +1,30 @@
-theme: jekyll-theme-modernist
-url: https://chemracer.github.io/DDQC_Demo/
-markdown: kramdown
+title: Data-Driven Quantum Chemistry Case Studies
+locale: en_US
+# NOTE: If you would like your site to be licensed under a creative commons license, uncomment the 'yes' next to the type of license you wish to use.
+creative-commons:
+  cc-by: #yes
+  cc-by-nc: yes
+
+#DO NOT EDIT BEYOND THIS POINT
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-# --- List of links in the navigation bar --- #
-navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
-
-# Name of website
-layout: page
-title: Data-Driven Quantum Chemistry Case Studies 
-permalink: https://chemracer.github.io/DDQC_Demo/
-description: Quantum Chemistry in the Age of Machine Learning
-
-# Default YAML values (more information on Jekyll's site)
-defaults:
-  -
-    scope:
-      path: ""
-      type: "page"
