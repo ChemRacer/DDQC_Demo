@@ -2,7 +2,7 @@
 layout: post
 title: DDCASPT2 
 tags: [CASPT2,DDCASPT2,Machine Learning, tutorial]
-category: blog
+category: DDCASPT2 
 ---
 
 ```python

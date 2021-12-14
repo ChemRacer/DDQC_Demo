@@ -2,7 +2,7 @@
 layout: post
 title: DDCCSD 
 tags: [CCSD,DDCCSD,Machine Learning, tutorial]
-category: blog
+category: DDCCSD 
 ---
 
 ```python
