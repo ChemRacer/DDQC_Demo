@@ -44,7 +44,7 @@ The total correlation energies for the full curve:
 E1Dict=pd.read_csv("E2.csv").rename(columns={'Unnamed: 0':'Label'}).set_index('Label')
 ```
 
-[[/images/PEC_4_3_1D_VDZP_LC.png]]
-[[/images/scaled_new_4_3_1D_VDZP_pair.png]]
-[[/images/scaled_new_4_3_1D_VDZP_LC.png]]
+![](/images/PEC_4_3_1D_VDZP_LC.png)
+![](/images/scaled_new_4_3_1D_VDZP_pair.png)
+![](/images/scaled_new_4_3_1D_VDZP_LC.png)
 
