@@ -1,5 +1,8 @@
-## Welcome to Our Bookchapter Website 
+layout: page
+title: "Home"
+permalink: https://chemracer.github.io/DDQC_Demo/Home
 
+## Welcome to Our Bookchapter Website 
 You can use the [editor on GitHub](https://github.com/ChemRacer/VogLab_Book_Chapter/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
