@@ -1,4 +1,5 @@
 theme: jekyll-theme-modernist
+url: https://chemracer.github.io/DDQC_Demo/
 markdown: kramdown
 plugins:
   - jekyll-paginate
@@ -17,7 +18,7 @@ navbar-links:
 # Name of website
 layout: page
 title: Data-Driven Quantum Chemistry Case Studies 
-permalink: https://chemracer.github.io/DDQC_Demo/Home
+permalink: https://chemracer.github.io/DDQC_Demo/
 description: Quantum Chemistry in the Age of Machine Learning
 
 
