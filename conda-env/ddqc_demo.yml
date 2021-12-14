@@ -1,4 +1,4 @@
-name: voglab 
+name: ddqc_demo 
 channels:
   - conda-forge
   - defaults
