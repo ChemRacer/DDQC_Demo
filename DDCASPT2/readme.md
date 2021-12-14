@@ -23,9 +23,9 @@ import sys
 !{sys.executable} -m pip install missing_package_name 
 ```
 # Files required to run gen_pair.ipynb:
-- The angles (106-180 degrees): keys.pickle
-- The regression targets Y (pair energies): targets.pickle
-- The feature set, X: feats.pickle
-- True CASSCF energies: casscf.csv
-- True CASPT2 energies: caspt2.csv
-- The true correlation energies (E2): E2.csv
+- The angles (106-180 degrees): DDQC_Demo/DDCASPT2/keys.pickle
+- The regression targets Y (pair energies): DDQC_Demo/DDCASPT2/targets.pickle
+- The feature set, X: DDQC_Demo/DDCASPT2/feats.pickle
+- True CASSCF energies: DDQC_Demo/DDCASPT2/casscf.csv
+- True CASPT2 energies: DDQC_Demo/DDCASPT2/caspt2.csv
+- The true correlation energies (E2): DDQC_Demo/DDCASPT2/E2.csv

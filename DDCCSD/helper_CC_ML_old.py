@@ -1,18 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[ ]:
-
-
-# In[3]:
-
-
-
-
-
-# In[2]:
-
-
 """
 A simple python script to compute RHF-CCSD energy. Equations (Spin orbitals) from reference 1
 have been spin-factored. However, explicit building of Wabef intermediates are avoided here.
@@ -128,7 +115,6 @@ def ndot(input_string, op1, op2, prefactor=None):
         else:
             new_view = np.squeeze(new_view)
 
-    # In-place mult by prefactor if requested
     if prefactor is not None:
         new_view *= prefactor
 
@@ -225,7 +211,6 @@ class HelperCCEnergy(object):
         self.rhf_e, self.wfn = psi4.energy('SCF', return_wfn=True)
         print("\nInitalizing CCSD object...\n")
 
-        # Integral generation from Psi4's MintsHelper
         time_init = time.time()       
 
         self.ccsd_corr_e = 0.0
@@ -256,7 +241,6 @@ class HelperCCEnergy(object):
                             limit of %4.2f GB." % (memory_footprint,
                                                    self.memory))
 
-        # Integral generation from Psi4's MintsHelper
         self.MO_1 = np.asarray(self.mints.mo_eri(self.C, self.C, self.C, self.C))
         # Physicist notation
         self.MO = self.MO_1.swapaxes(1, 2)
