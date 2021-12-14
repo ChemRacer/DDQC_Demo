@@ -154,7 +154,7 @@ plt.show()
 
 # Test set on the potential energy curve
 
-The pair energies ($\varepsilon_{pq}$) predicted from the test set can then be summed into correlation energies ($E_{2}$):
+The pair energies ($$\varepsilon_{pq}$$) predicted from the test set can then be summed into correlation energies ($$E_{2}$$):
 
 {% raw %}
 $$ E_{2}=\sum_{pq} \varepsilon_{pq}$$
