@@ -1,41 +1,12 @@
 ---
 layout: page
-description: Quantum Chemistry in the Age of Machine Learning
+excerpt: "About Me..."
 ---
 
-<!--- ## Welcome to Our Bookchapter Website 
-You can use the [editor on GitHub](https://github.com/ChemRacer/VogLab_Book_Chapter/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I am a academic, hear me roar. I am an Assistant Professor at Oregon Health & Science University.
 
+## Current Interests and Projects:
 
-### Tutorials
-[Tutorials](_posts/Tutorials/Tutorials.md){: .btn} for the data-drive complete active space second-order perturbation theory (DDCASPT2) can be found in [DDCASPT2](_posts/Tutorials/DDCASPT2/ddcaspt2.md) and data-driven coupled clusters singles and doubles [DDCCSD](_posts/Tutorials/DDCCSD/ddccsd.md)
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### About
-[About](_posts/about/about.md) 
-
-### Support or Contact
-Email [link](path_to_email) --->
+- Website Design
+- [GitHub Pages](http://laderast.github.io)
+- Academia
