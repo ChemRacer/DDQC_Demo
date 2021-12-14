@@ -9,7 +9,7 @@ For information on installing the code please refer to the [GitHub repository](h
 
 
 ## Authors
-The book chapter, webpage, and [GitHub repository](https://github.com/ChemRacer/DDQC_Demo) are maintained by the group of [Dr. Konstantinos Vogiatzis](https://vogiatzis.utk.edu/) at the University of Tennessee, Knoxville. The original DDCCSD code was written by Jacob Townsend. The DDCCSD example on this website were developed by P. D. Varuna S. Pathirage and the DDCASPT2 example by Grier M. Jones.
+The book chapter, webpage, and [GitHub repository](https://github.com/ChemRacer/DDQC_Demo) are maintained by the group of [Dr. Konstantinos Vogiatzis](https://vogiatzis.utk.edu/) at the University of Tennessee, Knoxville. The original DDCCSD code was written by Jacob Townsend. The DDCCSD example on this website was developed by P. D. Varuna S. Pathirage and the DDCASPT2 example by Grier M. Jones.
 
 
 ## Contact Information
