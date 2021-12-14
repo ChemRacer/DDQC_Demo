@@ -18,7 +18,7 @@ In this tutorial, the potential energies curve of the symmetric angle bend of oz
 - sklearn
 - mpl_toolkits
 
-If you are missing any of these packages I would recommend using the following lines in your juypter notebook:
+If you are missing any of these packages, we would recommend using the following lines in your juypter notebook:
 ```
 import sys
 !{sys.executable} -m pip install missing_package_name
@@ -156,7 +156,9 @@ plt.show()
 
 The pair energies ($\varepsilon_{pq}$) predicted from the test set can then be summed into correlation energies ($E_{2}$):
 
+{% raw %}
 $$ E_{2}=\sum_{pq} \varepsilon_{pq}$$
+{% endraw %}
 
 ```python
 pred_train_E2=np.sum(y_train_pred.reshape(len(train_ind),-1),axis=1)
