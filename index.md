@@ -5,7 +5,7 @@ You can use the [editor on GitHub](https://github.com/ChemRacer/VogLab_Book_Chap
 
 
 ### Tutorials
-[Tutorials](Tutorials/Tutorials.md){: .btn} for the data-drive complete active space second-order perturbation theory (DDCASPT2) can be found in [DDCASPT2](Tutorials/DDCASPT2/ddcaspt2.md) and data-driven coupled clusters singles and doubles [DDCCSD](Tutorials/DDCCSD/ddccsd.md)
+[Tutorials](_posts/Tutorials/Tutorials.md){: .btn} for the data-drive complete active space second-order perturbation theory (DDCASPT2) can be found in [DDCASPT2](_posts/Tutorials/DDCASPT2/ddcaspt2.md) and data-driven coupled clusters singles and doubles [DDCCSD](_posts/Tutorials/DDCCSD/ddccsd.md)
 
 ### Markdown
 
@@ -32,7 +32,7 @@ Syntax highlighted code block
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 ### About
-[About](about/about.md) 
+[About](_posts/about/about.md) 
 
 ### Support or Contact
 Email [link](path_to_email)
