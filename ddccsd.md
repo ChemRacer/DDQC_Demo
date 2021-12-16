@@ -7,7 +7,7 @@ category: DDCCSD
 Link to [Data-Driven Acceleration of the Coupled-Cluster Singles and Doubles Iterative Solver](https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01442) and [Transferable MP2-Based Machine Learning for Accurate Coupled-Cluster Energies](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00927).
 
 ```python
-# Importing the libraies
+# Import the packages
 import psi4
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -19,11 +19,15 @@ MLt2=0
 ```
 
 ```python
-# This box contains all the features the CCSD module logs for us to make predictions
-# Ultimately, just make sure you run this every time and all is well.
-
-features = ['Evir1', 'Hvir1', 'Jvir1', 'Kvir1', 'Evir2', 'Hvir2', 'Jvir2', 'Kvir2', 'Eocc1', 'Jocc1', 'Kocc1', 'Hocc1',
-            'Eocc2', 'Jocc2', 'Kocc2', 'Hocc2', 'Jia1', 'Jia2', 'Kia1', 'Kia2', 'diag', 'orbdiff', 'doublecheck', 't2start', 't2mag', 't2sign', 'Jia1mag', 'Jia2mag', 'Kia1mag', 'Kia2mag']
+# Below is a list of features utilized in the DDCCSD scheme
+features = ['Evir1', 'Hvir1', 'Jvir1', 'Kvir1', 
+            'Evir2', 'Hvir2', 'Jvir2', 'Kvir2', 
+            'Eocc1', 'Jocc1', 'Kocc1', 'Hocc1',
+            'Eocc2', 'Jocc2', 'Kocc2', 'Hocc2', 
+            'Jia1', 'Jia2', 'Kia1', 'Kia2', 
+            'diag', 'orbdiff', 'doublecheck', 
+            't2start', 't2mag', 't2sign', 
+            'Jia1mag', 'Jia2mag', 'Kia1mag', 'Kia2mag']
 '''
 Key:
 Letters:
@@ -31,10 +35,8 @@ E-Energy of the orbital
 H-1e contribution to the orbital energy
 J-Coulombic contribution to orbital energy
 K-Exchange contribution to orbital energy
-Placement:
-occ or virt, you get this..
-Number:
-is it electron one or two from the two electron excitation
+Placement: occ or virt
+Number: is it electron one or two from the two electron excitation
 
 
 Jia1- coulomb integral between orbital occ1 and vir1
@@ -54,7 +56,7 @@ Kia2mag np.log10(np.absolute(feature))
 
 '''
 
-
+# These feature weights have been optimized through a gridsearch optimization
 factors=(1,1.25,1.5,2,5,10,100,1000)
 
 factor= np.zeros((len(features)))
@@ -76,11 +78,10 @@ factor=factor.astype(int)
 for j in range(0,len(features)):
     a=factor[j]
     finalfactor[j]=factors[a]
-
 ```
 
 ```python
-# This function extract the features and the t2 amplitudes from the training set.
+# This function extracts the features and the t2 amplitudes for the training set.
 
 def GetAmps(Foldername, occ=False, vir=False):
     i=1
@@ -122,19 +123,18 @@ def GetAmps(Foldername, occ=False, vir=False):
     return array,finalamps
 ```
 
-## Error Calculation
+# Error Calculation
 
-Error is calculated using following equation:
+- Error is calculated using following equation:
 
 $$Error = |Final Energy - Start Energy|$$
 
-Start Energy = Energy calculated by substituting the predicted $$t_{2}$$ amplitude to CCSD energy equation
-Final Energy = Energy calculated by substituting the optimized $$t_{2}$$ amplitude to CCSD energy equation
-
+- Start Energy = Energy calculated by substituting the predicted $t_{2}$ amplitude to CCSD energy equation  
+- Final Energy = Energy calculated by substituting the optimized $t_{2}$ amplitude to CCSD energy equation
 
 ```python
-# This function retrives the features from the test set and then predict the t2 amplitudes.
-# It will input the predicted amplitudes to the CCSD energy equation and optimize those amplitudes.
+# This function retrives the features for the test set and then predicts the t2 amplitudes.
+# The predicted amplitudes are then passed back to Psi4 for the CCSD energy to be iteratively optimized.
 
 def Test(Foldername, occ=False, vir=False):
     steps=list()
@@ -216,34 +216,33 @@ def Test(Foldername, occ=False, vir=False):
 ```
 
 ```python
-# Extracting features from training molecules
+# Extract training features (X_train) and amplitudes (y_train)
 
 X_train,y_train=GetAmps('Water/Regular/Water5/')
 ```
 
 ```python
-# Scale all data before using them as features
+# Scale the features using a MinMaxScaler in Scikit-Learn
 
 scaler = MinMaxScaler().fit(X_train)
 X_train_scaled = scaler.transform(X_train)
 
-# This multiplies by the weighting vector from the start
+# Multiply the features by the optimized weights
 for a in range(0,len(features)):
     X_train_scaled[:,a] *= finalfactor[a]
 
-# This trains the model with our data    
+# Train the regression model
 knn=(KNeighborsRegressor(n_neighbors=1, p=2).fit(X_train_scaled,y_train)  )
-
 ```
 
 ```python
-# Predicting t2 amplitudes
+# Calls the Test function described above, which returns the start energy, the final, or optimized, energy, and the OH radius
 
 startEnergy, finalEnergy, OH_distance = Test('Water/Water100/')
 ```
 
 ```python
-# Plotting the start energy and final energy against bond distance
+# Plot the start energy and final energy against bond distance
 
 zipped_lists = zip(OH_distance, startEnergy, finalEnergy)
 sorted_pairs = sorted(zipped_lists)
