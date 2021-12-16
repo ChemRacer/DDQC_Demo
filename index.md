@@ -14,5 +14,3 @@ The book chapter, webpage, and [GitHub repository](https://github.com/ChemRacer/
 
 ## Contact Information
 For more information and bug reports, please contact Grier Jones [gjones39@vols.utk.edu](gjones39@vols.utk.edu) or Dr. Konstantinos Vogiatzis [kvogiatz@utk.edu](kvogiatz@utk.edu).
-## Acknowledgements
-
