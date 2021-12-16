@@ -3,9 +3,23 @@ layout: page
 title: DDCCSD 
 category: DDCCSD 
 ---
+This example uses the data-driven coupled-cluster singles and doubles (DDCCSD) model to predict energies along the dissociation curve of a water molecule. The DDCC method is presented in the publication [Data-Driven Acceleration of the Coupled-Cluster Singles and Doubles Iterative Solver](https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01442), *J. Phys. Chem. Lett.*, **2019**, *10*, 4129. For exploration of locality, please see [Transferable MP2-Based Machine Learning for Accurate Coupled-Cluster Energies](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00927), *J. Chem. Theory Comput.*, **2020**, *16*, 7453.
 
-Link to [Data-Driven Acceleration of the Coupled-Cluster Singles and Doubles Iterative Solver](https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01442) and [Transferable MP2-Based Machine Learning for Accurate Coupled-Cluster Energies](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00927).
 
+## Required python3 modules:
+- numpy
+- psi4
+- os
+- sklearn
+- matplotlib
+
+If you are missing any of these packages, we would recommend using the following lines in your juypter notebook:
+```
+import sys
+!{sys.executable} -m pip install missing_package_name
+```
+
+## Import packages
 ```python
 # Import the packages
 import psi4

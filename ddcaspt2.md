@@ -4,13 +4,13 @@ title: DDCASPT2
 category: DDCASPT2 
 ---
 
-In this tutorial, the potential energies curve of the symmetric angle bend of ozone is shown using DDCASPT2. 
+In this tutorial, the potential energy curve of the symmetric angle bend of ozone is shown using DDCASPT2. 
 
 
 
 ## Required python3 modules:
 - matplotlib
-- numpy as np
+- numpy
 - pandas
 - seaborn
 - os
