@@ -1,7 +1,7 @@
 ---
-layout: page 
-title: DDCCSD 
-category: DDCCSD 
+layout: page
+title: DDCCSD
+category: DDCCSD
 ---
 This example uses the data-driven coupled-cluster singles and doubles (DDCCSD) model to predict energies along the dissociation curve of a water molecule. The DDCC method is presented in the publication [Data-Driven Acceleration of the Coupled-Cluster Singles and Doubles Iterative Solver](https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01442), *J. Phys. Chem. Lett.*, **2019**, *10*, 4129. For exploration of locality, please see [Transferable MP2-Based Machine Learning for Accurate Coupled-Cluster Energies](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00927), *J. Chem. Theory Comput.*, **2020**, *16*, 7453.
 
@@ -34,13 +34,13 @@ MLt2=0
 
 ```python
 # Below is a list of features utilized in the DDCCSD scheme
-features = ['Evir1', 'Hvir1', 'Jvir1', 'Kvir1', 
-            'Evir2', 'Hvir2', 'Jvir2', 'Kvir2', 
+features = ['Evir1', 'Hvir1', 'Jvir1', 'Kvir1',
+            'Evir2', 'Hvir2', 'Jvir2', 'Kvir2',
             'Eocc1', 'Jocc1', 'Kocc1', 'Hocc1',
-            'Eocc2', 'Jocc2', 'Kocc2', 'Hocc2', 
-            'Jia1', 'Jia2', 'Kia1', 'Kia2', 
-            'diag', 'orbdiff', 'doublecheck', 
-            't2start', 't2mag', 't2sign', 
+            'Eocc2', 'Jocc2', 'Kocc2', 'Hocc2',
+            'Jia1', 'Jia2', 'Kia1', 'Kia2',
+            'diag', 'orbdiff', 'doublecheck',
+            't2start', 't2mag', 't2sign',
             'Jia1mag', 'Jia2mag', 'Kia1mag', 'Kia2mag']
 '''
 Key:
@@ -55,14 +55,14 @@ Number: is it electron one or two from the two electron excitation
 
 Jia1- coulomb integral between orbital occ1 and vir1
 Jia2 " but 2
-Kia1 - exchange integral between orbital 
+Kia1 - exchange integral between orbital
 Kia2 Same but exchange integral
 diag - is it on the diagonal, aka, are the two excited electrons going to the same orbital **this is important fyi
 orbdiff - (Evir2 + Evir1 - Eocc1 - Eocc2)
 doublecheck - full 2electron integral
 t2start - INITIAL MP2 amplitude **this is the inital guess
 t2mag - np.log10(np.absolute(t2start)) ~ this is going to be a common trend, since it is more straightforward for ML algorithms to understand
-t2sign - (t2start > 1)? 
+t2sign - (t2start > 1)?
 Jia1mag - np.log10(np.absolute(feature))
 Jia2mag np.log10(np.absolute(feature))
 Kia1mag  np.log10(np.absolute(feature))
@@ -133,7 +133,7 @@ def GetAmps(Foldername, occ=False, vir=False):
 
     array=Bigfeatures
     finalamps=Bigamps
-    
+
     return array,finalamps
 ```
 
@@ -143,7 +143,7 @@ def GetAmps(Foldername, occ=False, vir=False):
 
 $$Error = |Final Energy - Start Energy|$$
 
-- Start Energy = Energy calculated by substituting the predicted $t_{2}$ amplitude to CCSD energy equation  
+- Start Energy = Energy calculated by substituting the predicted $t_{2}$ amplitude to CCSD energy equation
 - Final Energy = Energy calculated by substituting the optimized $t_{2}$ amplitude to CCSD energy equation
 
 ```python
@@ -167,13 +167,13 @@ def Test(Foldername, occ=False, vir=False):
                 xyz_file = open(file_path, 'r')
                 text = xyz_file.read()
                 xyz_file.close()
-                
+
                 xyz_file = open(file_path, 'r')
                 text_lines = xyz_file.readlines()
                 xyz_file.close()
-                
+
                 print(file_path)
-                
+
                 mol = psi4.geometry(text)
 
                 psi4.set_options({'basis':        'cc-pVDZ',
@@ -183,10 +183,10 @@ def Test(Foldername, occ=False, vir=False):
                                   'mp2_type':     'conv',
                                   'e_convergence': 1e-8,
                                   'd_convergence': 1e-8})
-                
+
                 MLt2=0
                 A=HelperCCEnergy(mol)
-                
+
                 matrixsize=A.nocc*A.nocc*A.nvirt*A.nvirt
                 Xnew=np.zeros([1,matrixsize,len(features)])
                 for x in range (0,len(features)):
@@ -197,7 +197,7 @@ def Test(Foldername, occ=False, vir=False):
 
                 X_new_scaled= scaler.transform(Xnew)
                 X_newer_scaled= X_new_scaled
-                
+
                 for x in range (0,len(features)):
                     X_newer_scaled[:,x] *= finalfactor[x]
 
@@ -206,26 +206,26 @@ def Test(Foldername, occ=False, vir=False):
                 ynew2=knn.predict(X_newer_scaled)
                 MLt2=ynew2.reshape(A.nocc,A.nocc,A.nvirt,A.nvirt)
                 A.t2=MLt2
-                
+
                 OH_distance = float(text_lines[1].split()[2])
-                
+
                 A.compute_t1()
                 A.compute_energy()
                 rhfenergy.append(A.rhf_e)
                 startenergy.append(A.StartEnergy)
                 finalenergy.append(A.FinalEnergy)
                 OH_distance_list.append(OH_distance)
-                
-    
+
+
     startEn = np.add(np.array(startenergy),np.array(rhfenergy))
     finalEn = np.add(np.array(finalenergy),np.array(rhfenergy))
     difference.append(sum( np.abs(np.asarray(startenergy) - np.asarray(finalenergy))) /len(startenergy))
     differences = np.abs(np.asarray(startenergy) - np.asarray(finalenergy))
-    
+
     print('-------------------------------------------------------------------------------------------------------')
     print ('Average Error: ')
     print (difference)
-    
+
     return(startEn, finalEn, OH_distance_list)
 ```
 
@@ -267,10 +267,12 @@ BondDistance, StartEnergy, FinalEnergy = [ list(tuple) for tuple in  tuples]
 plt.title('Energy vs Bond Distance')
 plt.xlabel('Bond distance ($\AA$)')
 plt.ylabel('Energy ($E_{h}$)')
-plt.plot(BondDistance, StartEnergy, label = 'Start Energy')
-plt.plot(BondDistance, FinalEnergy, label = 'Final Energy')
+plt.plot(BondDistance, StartEnergy, label = '5 training molecules')
+plt.plot(BondDistance, FinalEnergy, label = '50 training molecules')
 plt.legend(loc="upper right")
+plt.tight_layout()
+plt.savefig('new_Varuna_figure.png',dpi=300)
 plt.show()
 ```
-![](/images/Water2.png)
+![](/images/new_Varuna_figure.png)
 
