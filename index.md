@@ -16,4 +16,4 @@ The book chapter, webpage, and [GitHub repository](https://github.com/ChemRacer/
 For more information and bug reports, please contact Grier Jones [gjones39@vols.utk.edu](gjones39@vols.utk.edu) or Dr. Konstantinos Vogiatzis [kvogiatz@utk.edu](kvogiatz@utk.edu).
 
 ## Acknowledgements 
-We gratefully acknowledge the National Science Foundation (CHE-1800237) for financial support of this work.
+We gratefully acknowledge the National Science Foundation (CHE-1800237, CHE-2143354) for financial support of this work.
