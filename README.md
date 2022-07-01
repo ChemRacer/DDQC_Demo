@@ -1,5 +1,5 @@
 # Data-Driven Quantum Chemistry Case Studies
-This repository provides examples of data-driven quantum chemistry (DDQC) methods from the "Machine Learning for Accelerating and Improving *ab initio* Wave Function-based Methods" book chapter in  *Quantum Chemistry in the Age of Machine Learning*.
+This repository provides examples of data-driven quantum chemistry (DDQC) methods from the "Data-Driven acceleration of coupled-cluster and perturbation theory methods" book chapter in  *Quantum Chemistry in the Age of Machine Learning*.
 
 ## Code Versions
 - DDCCSD=0.1
