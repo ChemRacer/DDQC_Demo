@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-This website contains examples of data-driven quantum chemistry (DDQC) methods from the "Machine Learning for Accelerating and Improving *ab initio* Wave Function-based Methods" book chapter by Grier M. Jones, P. D. Varuna S. Pathirage, and Konstantinos D. Vogiatzis in  *Quantum Chemistry in the Age of Machine Learning*. Examples on this website include the generation of the potential energy curve of the symmetric O-H bond stretch of water using data-driven coupled-cluster singles and doubles (DDCCSD) and the symmetric angle bend of ozone with data-driven complete active space second-order perturbation theory (DDCASPT2).
+This website contains examples of data-driven quantum chemistry (DDQC) methods from the "Data-Driven acceleration of coupled-cluster and perturbation theory methods" book chapter by Grier M. Jones, P. D. Varuna S. Pathirage, and Konstantinos D. Vogiatzis in  *Quantum Chemistry in the Age of Machine Learning*. Examples on this website include the generation of the potential energy curve of the symmetric O-H bond stretch of water using data-driven coupled-cluster singles and doubles (DDCCSD) and the symmetric angle bend of ozone with data-driven complete active space second-order perturbation theory (DDCASPT2).
 
 
 ## Installation
