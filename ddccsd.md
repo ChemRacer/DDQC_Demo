@@ -143,8 +143,8 @@ def GetAmps(Foldername, occ=False, vir=False):
 
 $$Error = |Final Energy - Start Energy|$$
 
-- Start Energy = Energy calculated by substituting the predicted $t_{2}$ amplitude to CCSD energy equation
-- Final Energy = Energy calculated by substituting the optimized $t_{2}$ amplitude to CCSD energy equation
+- Start Energy = Energy calculated by substituting the predicted $$t_{2}$$ amplitude to CCSD energy equation
+- Final Energy = Energy calculated by substituting the optimized $$t_{2}$$ amplitude to CCSD energy equation
 
 ```python
 # This function retrives the features for the test set and then predicts the t2 amplitudes.
