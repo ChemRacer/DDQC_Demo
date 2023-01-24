@@ -1,3 +1,4 @@
+[![HitCount](https://hits.dwyl.com/ChemRacer/DDQC_Demo.svg?style=flat-square&show=unique)](http://hits.dwyl.com/ChemRacer/DDQC_Demo)
 # Data-Driven Quantum Chemistry Case Studies
 This repository provides examples of data-driven quantum chemistry (DDQC) methods from the "Data-Driven acceleration of coupled-cluster and perturbation theory methods" book chapter in  *Quantum Chemistry in the Age of Machine Learning*.
 
