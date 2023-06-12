@@ -6,6 +6,7 @@ category: DDCASPT2
 
 In this tutorial, the potential energy curve of the symmetric angle bend of ozone is shown using data-driven complete active space second-order perturbation theory (DDCASPT2). 
 
+Link to the code repository: [DDQC Demo](https://github.com/ChemRacer/DDQC_Demo)
 
 
 ## Required python3 modules:
